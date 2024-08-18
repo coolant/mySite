@@ -37,7 +37,18 @@
                                             </div>
                                         </div>
                                        
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Enter</button>
+                                            @if ($errors->count())
+                                                <div class='alert-alert-danger'>
+                                                   <ul>
+                                                    @foreach ($errors->get('login') as $err)
+                                                        {{$err}}
+                                                    @endforeach
+                                                   </ul>
+                                                </div>
+                                            @endif
+
+
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
