@@ -32,7 +32,7 @@ class MemberController extends Controller
 
         if($data['password'] !== $data['repassword']){
             $message = ['type'=>'danger','description'=>'Passwords are not matched'];
-            return redirect()->back()->with(['message'=>$message]);
+            return redirect()->back()->withInput()->with(['message'=>$message]);
         }
 
 

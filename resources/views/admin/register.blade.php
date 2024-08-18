@@ -1,4 +1,4 @@
-    @extends('layouts.members')
+@extends('layouts.members')
 @section('content')
 
     <div class="container">
@@ -17,16 +17,16 @@
                                 @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="name" class="form-control form-control-user" id="exampleFirstName"
+                                        <input type="text" name="name" value="{{old('name')}}" class="form-control form-control-user" id="exampleFirstName"
                                             placeholder="First Name">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" name="surname" class="form-control form-control-user" id="exampleLastName"
+                                        <input type="text" name="surname" value="{{old('surname')}}" class="form-control form-control-user" id="exampleLastName"
                                             placeholder="Last Name">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email"class="form-control form-control-user" id="exampleInputEmail"
+                                    <input type="email" name="email" value="{{old('email')}}" class="form-control form-control-user" id="exampleInputEmail"
                                         placeholder="Email Address">
                                 </div>
                                 <div class="form-group row">
