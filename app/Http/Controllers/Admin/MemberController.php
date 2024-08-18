@@ -17,4 +17,10 @@ class MemberController extends Controller
             ['login' => 'Wrong Password or Username']
         );
     }
+
+
+    public function logout(){
+        auth()->logout();
+        return redirect(route('admin.login'));
+    }
 }
