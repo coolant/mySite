@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class MemberController extends Controller
 {
@@ -22,5 +23,28 @@ class MemberController extends Controller
     public function logout(){
         auth()->logout();
         return redirect(route('admin.login'));
+    }
+
+      public function register(Request $request){
+        
+        $data = $request->only('name','surname','email','password','repassword');
+        // dd($data);
+
+        if($data['password'] !== $data['repassword']){
+            $message = ['type'=>'danger','description'=>'Passwords are not matched'];
+            return redirect()->back()->with(['message'=>$message]);
+        }
+
+
+
+
+        User::create([
+            'name' => $data['name'].' '. $data['surname'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'aboutme'=>'about me'
+        ]);
+          $message = ['type'=>'success','description'=>'You are successfully registered!'];
+         return redirect(route('admin.login'))->with(['message'=>$message]);
     }
 }

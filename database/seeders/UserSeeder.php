@@ -16,7 +16,9 @@ class UserSeeder extends Seeder
         User::create([
             'name' => 'Aykut',
             'email'=>'aykutyilm4z@outlook.com',
-            'password'=> bcrypt('12345678')
+            'password'=> bcrypt('12345678'),
+            'aboutme'=>'fdasfdasfsadfsadf',
+            'birthday'=>'2000-08-18'
         ]);
     }
 }
