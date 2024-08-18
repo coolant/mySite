@@ -42,7 +42,7 @@
                                                 <div class='alert-alert-danger'>
                                                    <ul>
                                                     @foreach ($errors->get('login') as $err)
-                                                        {{$err}}
+                                                       <li style='list-style-type: none' class='alert-danger'>{{$err}}</li> 
                                                     @endforeach
                                                    </ul>
                                                 </div>
