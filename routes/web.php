@@ -11,3 +11,4 @@ Route::get('/', function () {
 Route::get('/admin/general',[AdminController::class, 'index'])->name('admin.index');
 Route::get('/admin/',[AdminController::class, 'login'])->name('admin.login');
 Route::get('/admin/register',[AdminController::class, 'register'])->name('admin.register');
+Route::get('/admin/forget-password',[AdminController::class, 'forgetpassword'])->name('admin.forgetpassword');
