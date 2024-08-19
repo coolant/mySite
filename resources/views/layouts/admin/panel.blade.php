@@ -80,9 +80,9 @@
             </li>
            
             <!-- Nav Item - Utilities Collapse Menu -->
-             @hasanyrole('blog-admin|SuperAdmin')
+             
                  <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="{{route('admin.news.index')}}">
                     <i class="fas fa-stream"></i>
                     <span>Blogs</span></a>
             </li>
@@ -97,7 +97,7 @@
                     </div>
                 </div> -->
                 </li>  
-             @endhasanyrole
+             
             
 
             <!-- Divider -->
