@@ -1,8 +1,13 @@
 <?php
 
+use Illuminate\Auth\Middleware\Authenticate;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
