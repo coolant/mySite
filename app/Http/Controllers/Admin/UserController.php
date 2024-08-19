@@ -15,6 +15,12 @@ class UserController extends Controller
         return view('admin.users.index',compact('users'));    //send users to index page with compact
     }
 
+     public function about(){
+    
+
+        return view('admin.users.about');    
+    }
+
     public function show(User $user){
         // dd($user);
 

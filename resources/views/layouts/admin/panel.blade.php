@@ -81,7 +81,7 @@
            
             <!-- Nav Item - Utilities Collapse Menu -->
              
-                 <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.news.index')}}">
                     <i class="fas fa-stream"></i>
                     <span>Blogs-only admin can see ADD button</span></a>
@@ -130,11 +130,11 @@
             </li> -->
 
             <!-- Nav Item - Charts -->
-            <!-- <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.users.about')}}">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li> -->
+                    <span>About</span></a>
+            </li>
 
             <!-- Nav Item - Tables -->
              @hasanyrole('SuperAdmin')

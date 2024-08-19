@@ -30,6 +30,7 @@ Route::get('/admin/logout',[MemberController::class, 'logout'])->name('admin.log
 Route::post('/admin/register',[MemberController::class, 'register'])->name('admin.register.post');
 
 Route::get('/admin/usersList',[UserController::class, 'index'])->name('admin.users.index');
+Route::get('/admin/about',[UserController::class, 'about'])->name('admin.users.about');
 Route::get('/admin/usersList/{user}',[UserController::class, 'show'])->name('admin.users.show');
 Route::post('/admin/usersList/{user}',[UserController::class, 'updatepermissions'])->name('admin.users.updatepermissions');
 
