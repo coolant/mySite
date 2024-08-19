@@ -12,15 +12,21 @@
                         </a>
                         @endhasanyrole
                         <br/>
+                        
                         <br/>
                         <div class="table-responsive">
+
+                           
+
+
+                        
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Name</th>
-                                        <th>Address</th>
-                                        <th>Telephone</th> 
+                                        <th>Title</th>
+                                        <th>Content</th>
+                                        
                                         <th>Photo</th> 
                                 </thead>
                                 </thead>

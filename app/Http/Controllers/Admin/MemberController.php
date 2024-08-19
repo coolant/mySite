@@ -25,7 +25,7 @@ class MemberController extends Controller
         return redirect(route('admin.login'));
     }
 
-      public function register(Request $request){
+    public function register(Request $request){
         
         $data = $request->only('name','surname','email','password','repassword');
         // dd($data);
