@@ -84,7 +84,7 @@
                  <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.news.index')}}">
                     <i class="fas fa-stream"></i>
-                    <span>Blogs</span></a>
+                    <span>Blogs-only admin can see ADD button</span></a>
             </li>
                 <!-- <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -152,12 +152,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="/template/img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-            </div>
+       
 
         </ul>
         <!-- End of Sidebar -->
