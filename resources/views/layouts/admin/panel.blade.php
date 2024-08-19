@@ -129,9 +129,9 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                <a class="nav-link" href="{{route('admin.users.index')}}">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span></a>
             </li>
 
             <!-- Divider -->
