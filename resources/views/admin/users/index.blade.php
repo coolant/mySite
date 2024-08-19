@@ -21,6 +21,7 @@
                                             <th>Email</th>
                                             <th>Birthday</th>
                                             <th>About</th>
+                                            <th>Role</th>
                                            
                                         </tr>
                                     </thead>
@@ -30,6 +31,7 @@
                                             <th>Email</th>
                                             <th>Birthday</th>
                                             <th>About</th>
+                                            <th>Role</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>                                     
@@ -39,6 +41,11 @@
                                                 <td>{{$user->email}}</td>
                                                 <td>{{$user->birthday}}</td>
                                                 <td>{{$user->aboutme}}</td>
+                                                <td>
+                                                    @foreach ($user->roles as $role )
+                                                        {{$role->title}}
+                                                    @endforeach
+                                                </td>
                                              </tr>
                                          @endforeach
                                     </tbody>

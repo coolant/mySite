@@ -73,11 +73,12 @@
             </li>
 
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
+             @hasanyrole('blog-admin|SuperAdmin')
+               <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>Blog</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -89,7 +90,9 @@
                         <a class="collapse-item" href="utilities-other.html">Other</a>
                     </div>
                 </div>
-            </li>
+                </li>  
+             @endhasanyrole
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -128,12 +131,13 @@
             </li>
 
             <!-- Nav Item - Tables -->
+             @hasanyrole('SuperAdmin')
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.users.index')}}">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Users</span></a>
             </li>
-
+            @endhasanyrole
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
