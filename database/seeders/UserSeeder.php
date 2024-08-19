@@ -111,15 +111,15 @@ class UserSeeder extends Seeder
         $user= User::updateOrCreate(
                 [
           
-                'email'=>'aykutyilm4z@outlook.com'
+                'email'=>'admin@ehb.be'
            
                 ],           
             [
-            'name' => 'Aykut',
-            'email'=>'aykutyilm4z@outlook.com',
-            'password'=> bcrypt('12345678'),
-            'aboutme'=>'fdasfdasfsadfsadf',
-            'birthday'=>'2000-08-18'
+            'name' => 'Admin',
+            'email'=>'admin@ehb.be',
+            'password'=> bcrypt('Password!321'),
+            'aboutme'=>'I am the admin',
+            'birthday'=>'1987-06-28'
         ]);
 
         $user->assignRole($role);
