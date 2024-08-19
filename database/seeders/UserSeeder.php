@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Permission;
+use App\Models\Role;
+use Illuminate\Support\Str;
 use Illuminate\Database\Seeder;
-use Spatie\Permission\Models\Role;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class UserSeeder extends Seeder
@@ -45,7 +47,64 @@ class UserSeeder extends Seeder
         ]);
 
 
+        $permissions['blog-admin']=[
+            [
+                'title'=>'Can view the blog text',
+                'description'=>'Can view the blog text'
+            ],
+            [
+                'title'=>'Can edit the blog text',
+                'description'=>'Can edit the blog text'
+            ],
+            [
+                'title'=>'Can view the blog categories',
+                'description'=>'Can view the blog categories'
+            ],
+            [
+                'title'=>'Can edit the blog categories',
+                'description'=>'Can edit the blog categories'
+            ],
+        ];
 
+
+           $permissions['ecommerce-admin']=[
+            [
+                'title'=>'Can view the orders',
+                'description'=>'Can view the orders'
+            ],
+            [
+                'title'=>'Can edit the orders',
+                'description'=>'Can edit the orders'
+            ],
+            [
+                'title'=>'Can view the products',
+                'description'=>'Can view the products'
+            ],
+            [
+                'title'=>'Can edit the products',
+                'description'=>'Can edit the products'
+            ],
+        ];
+
+        foreach($permissions as $key => $permission){
+            $role = Role::where('name', $key)->first();
+            // dd($key,$permission);
+
+            foreach( $permission as $p){
+                $newPermission = Permission::updateOrCreate(
+                    ['name' => Str::slug($p['title'])],
+                    [
+                        'name' => Str::slug($p['title']),
+                        'title' => Str::slug($p['title']),
+                        'description' => Str::slug($p['description'])
+                    ]
+                );
+            }
+            //set permission to role
+
+            $role->givePermissionTo( $newPermission);
+           
+        }
 
 
 
