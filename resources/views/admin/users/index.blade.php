@@ -22,6 +22,7 @@
                                             <th>Birthday</th>
                                             <th>About</th>
                                             <th>Role</th>
+                                            <th>Detail</th>
                                            
                                         </tr>
                                     </thead>
@@ -32,6 +33,7 @@
                                             <th>Birthday</th>
                                             <th>About</th>
                                             <th>Role</th>
+                                            <th>Detail</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>                                     
@@ -46,6 +48,7 @@
                                                         {{$role->title}}
                                                     @endforeach
                                                 </td>
+                                                <td><a href="{{route('admin.users.show',$user->id)}}" class="btn btn-primary">Detail</a></td>
                                              </tr>
                                          @endforeach
                                     </tbody>
